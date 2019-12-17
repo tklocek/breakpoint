@@ -17,6 +17,10 @@
 		705DCF2423A8E1950066B144 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 705DCF2223A8E1950066B144 /* LaunchScreen.storyboard */; };
 		705DCF3123A8E3C60066B144 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 705DCF3023A8E3C60066B144 /* GoogleService-Info.plist */; };
 		705DCF3323A8F5360066B144 /* DataService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 705DCF3223A8F5360066B144 /* DataService.swift */; };
+		705DCF3523A94A970066B144 /* AuthVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 705DCF3423A94A970066B144 /* AuthVC.swift */; };
+		705DCF3723A94ADE0066B144 /* LoginVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 705DCF3623A94ADE0066B144 /* LoginVC.swift */; };
+		705DCF3923A94B690066B144 /* InsetTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 705DCF3823A94B690066B144 /* InsetTextField.swift */; };
+		705DCF3B23A950BE0066B144 /* ShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 705DCF3A23A950BE0066B144 /* ShadowView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +35,10 @@
 		705DCF2523A8E1950066B144 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		705DCF3023A8E3C60066B144 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		705DCF3223A8F5360066B144 /* DataService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataService.swift; sourceTree = "<group>"; };
+		705DCF3423A94A970066B144 /* AuthVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthVC.swift; sourceTree = "<group>"; };
+		705DCF3623A94ADE0066B144 /* LoginVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginVC.swift; sourceTree = "<group>"; };
+		705DCF3823A94B690066B144 /* InsetTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsetTextField.swift; sourceTree = "<group>"; };
+		705DCF3A23A950BE0066B144 /* ShadowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowView.swift; sourceTree = "<group>"; };
 		8F9ADD5925C525955AA91565 /* Pods-breakpoint.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-breakpoint.debug.xcconfig"; path = "Target Support Files/Pods-breakpoint/Pods-breakpoint.debug.xcconfig"; sourceTree = "<group>"; };
 		C0109CC756CC7C5A01C9EFFC /* Pods_breakpoint.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_breakpoint.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA139D08D36224E5D7DEFE68 /* Pods-breakpoint.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-breakpoint.release.xcconfig"; path = "Target Support Files/Pods-breakpoint/Pods-breakpoint.release.xcconfig"; sourceTree = "<group>"; };
@@ -90,6 +98,8 @@
 			children = (
 				705DCF1B23A8E1910066B144 /* SecondViewController.swift */,
 				705DCF1923A8E1910066B144 /* FirstViewController.swift */,
+				705DCF3423A94A970066B144 /* AuthVC.swift */,
+				705DCF3623A94ADE0066B144 /* LoginVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -97,6 +107,8 @@
 		705DCF2C23A8E1DD0066B144 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				705DCF3823A94B690066B144 /* InsetTextField.swift */,
+				705DCF3A23A950BE0066B144 /* ShadowView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -256,7 +268,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				705DCF3B23A950BE0066B144 /* ShadowView.swift in Sources */,
+				705DCF3523A94A970066B144 /* AuthVC.swift in Sources */,
 				705DCF1C23A8E1910066B144 /* SecondViewController.swift in Sources */,
+				705DCF3723A94ADE0066B144 /* LoginVC.swift in Sources */,
+				705DCF3923A94B690066B144 /* InsetTextField.swift in Sources */,
 				705DCF1A23A8E1910066B144 /* FirstViewController.swift in Sources */,
 				705DCF1623A8E1910066B144 /* AppDelegate.swift in Sources */,
 				705DCF1823A8E1910066B144 /* SceneDelegate.swift in Sources */,
