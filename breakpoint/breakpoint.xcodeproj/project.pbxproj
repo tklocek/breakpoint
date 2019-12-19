@@ -10,8 +10,8 @@
 		134BF40ECE5858FC3B1592F1 /* Pods_breakpoint.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0109CC756CC7C5A01C9EFFC /* Pods_breakpoint.framework */; };
 		705DCF1623A8E1910066B144 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 705DCF1523A8E1910066B144 /* AppDelegate.swift */; };
 		705DCF1823A8E1910066B144 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 705DCF1723A8E1910066B144 /* SceneDelegate.swift */; };
-		705DCF1A23A8E1910066B144 /* FirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 705DCF1923A8E1910066B144 /* FirstViewController.swift */; };
-		705DCF1C23A8E1910066B144 /* SecondViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 705DCF1B23A8E1910066B144 /* SecondViewController.swift */; };
+		705DCF1A23A8E1910066B144 /* FeedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 705DCF1923A8E1910066B144 /* FeedVC.swift */; };
+		705DCF1C23A8E1910066B144 /* GroupsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 705DCF1B23A8E1910066B144 /* GroupsVC.swift */; };
 		705DCF1F23A8E1910066B144 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 705DCF1D23A8E1910066B144 /* Main.storyboard */; };
 		705DCF2123A8E1950066B144 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 705DCF2023A8E1950066B144 /* Assets.xcassets */; };
 		705DCF2423A8E1950066B144 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 705DCF2223A8E1950066B144 /* LaunchScreen.storyboard */; };
@@ -28,8 +28,8 @@
 		705DCF1223A8E1910066B144 /* breakpoint.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = breakpoint.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		705DCF1523A8E1910066B144 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		705DCF1723A8E1910066B144 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		705DCF1923A8E1910066B144 /* FirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirstViewController.swift; sourceTree = "<group>"; };
-		705DCF1B23A8E1910066B144 /* SecondViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondViewController.swift; sourceTree = "<group>"; };
+		705DCF1923A8E1910066B144 /* FeedVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FeedVC.swift; sourceTree = "<group>"; };
+		705DCF1B23A8E1910066B144 /* GroupsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupsVC.swift; sourceTree = "<group>"; };
 		705DCF1E23A8E1910066B144 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		705DCF2023A8E1950066B144 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		705DCF2323A8E1950066B144 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -98,8 +98,8 @@
 		705DCF2B23A8E1C70066B144 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				705DCF1B23A8E1910066B144 /* SecondViewController.swift */,
-				705DCF1923A8E1910066B144 /* FirstViewController.swift */,
+				705DCF1B23A8E1910066B144 /* GroupsVC.swift */,
+				705DCF1923A8E1910066B144 /* FeedVC.swift */,
 				705DCF3423A94A970066B144 /* AuthVC.swift */,
 				705DCF3623A94ADE0066B144 /* LoginVC.swift */,
 			);
@@ -273,10 +273,10 @@
 			files = (
 				705DCF3B23A950BE0066B144 /* ShadowView.swift in Sources */,
 				705DCF3523A94A970066B144 /* AuthVC.swift in Sources */,
-				705DCF1C23A8E1910066B144 /* SecondViewController.swift in Sources */,
+				705DCF1C23A8E1910066B144 /* GroupsVC.swift in Sources */,
 				705DCF3723A94ADE0066B144 /* LoginVC.swift in Sources */,
 				705DCF3923A94B690066B144 /* InsetTextField.swift in Sources */,
-				705DCF1A23A8E1910066B144 /* FirstViewController.swift in Sources */,
+				705DCF1A23A8E1910066B144 /* FeedVC.swift in Sources */,
 				705DCF1623A8E1910066B144 /* AppDelegate.swift in Sources */,
 				705DCF3D23A953270066B144 /* AuthService.swift in Sources */,
 				705DCF1823A8E1910066B144 /* SceneDelegate.swift in Sources */,
