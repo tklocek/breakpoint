@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		134BF40ECE5858FC3B1592F1 /* Pods_breakpoint.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C0109CC756CC7C5A01C9EFFC /* Pods_breakpoint.framework */; };
 		70152FF523ABA89A00B109C3 /* MeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70152FF423ABA89A00B109C3 /* MeVC.swift */; };
+		70152FF723AD3D5A00B109C3 /* CreatePostVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70152FF623AD3D5A00B109C3 /* CreatePostVC.swift */; };
 		705DCF1623A8E1910066B144 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 705DCF1523A8E1910066B144 /* AppDelegate.swift */; };
 		705DCF1823A8E1910066B144 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 705DCF1723A8E1910066B144 /* SceneDelegate.swift */; };
 		705DCF1A23A8E1910066B144 /* FeedVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 705DCF1923A8E1910066B144 /* FeedVC.swift */; };
@@ -27,6 +28,7 @@
 
 /* Begin PBXFileReference section */
 		70152FF423ABA89A00B109C3 /* MeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeVC.swift; sourceTree = "<group>"; };
+		70152FF623AD3D5A00B109C3 /* CreatePostVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePostVC.swift; sourceTree = "<group>"; };
 		705DCF1223A8E1910066B144 /* breakpoint.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = breakpoint.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		705DCF1523A8E1910066B144 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		705DCF1723A8E1910066B144 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -105,6 +107,7 @@
 				705DCF3423A94A970066B144 /* AuthVC.swift */,
 				705DCF3623A94ADE0066B144 /* LoginVC.swift */,
 				70152FF423ABA89A00B109C3 /* MeVC.swift */,
+				70152FF623AD3D5A00B109C3 /* CreatePostVC.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -282,6 +285,7 @@
 				705DCF1A23A8E1910066B144 /* FeedVC.swift in Sources */,
 				705DCF1623A8E1910066B144 /* AppDelegate.swift in Sources */,
 				70152FF523ABA89A00B109C3 /* MeVC.swift in Sources */,
+				70152FF723AD3D5A00B109C3 /* CreatePostVC.swift in Sources */,
 				705DCF3D23A953270066B144 /* AuthService.swift in Sources */,
 				705DCF1823A8E1910066B144 /* SceneDelegate.swift in Sources */,
 				705DCF3323A8F5360066B144 /* DataService.swift in Sources */,

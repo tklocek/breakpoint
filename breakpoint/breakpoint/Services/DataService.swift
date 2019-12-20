@@ -9,9 +9,10 @@
 import Foundation
 import Firebase
 
-let DB_BASE = Database.database().reference()
+var DB_BASE: DatabaseReference! = Database.database().reference()
 
 class DataService {
+    
     static let instance = DataService()
     
     private var _REF_BASE = DB_BASE
@@ -20,7 +21,7 @@ class DataService {
     private var _REF_FEED = DB_BASE.child("feed")
 
     var REF_BASE: DatabaseReference {
-        return _REF_BASE
+        return _REF_BASE!
     }
     
     var REF_USERS: DatabaseReference {
@@ -40,7 +41,15 @@ class DataService {
         REF_USERS.child(uid).updateChildValues(userData)
     }
     
-    
+    func uploadPost(withMessage message: String, forUID uid: String, withGroupKey groupKey: String?, sendComplete: @escaping (_ status: Bool) -> ()  ) {
+        if groupKey != nil {
+            // send to groups ref
+        } else {
+            REF_FEED.childByAutoId().updateChildValues(["content": message, "senderId": uid])
+            sendComplete(true)
+        }
+        
+    }
     
     
     
