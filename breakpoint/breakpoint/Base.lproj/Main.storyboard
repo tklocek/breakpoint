@@ -125,7 +125,7 @@
                                     <constraint firstItem="Uft-N7-9mG" firstAttribute="centerY" secondItem="FOs-JP-C9K" secondAttribute="centerY" id="oP0-qF-U4W"/>
                                 </constraints>
                             </view>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cJJ-Nr-8wB">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="defaultProfileImage" translatesAutoresizingMaskIntoConstraints="NO" id="cJJ-Nr-8wB">
                                 <rect key="frame" x="16" y="90" width="60" height="60"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="60" id="TIh-0S-zVI"/>
@@ -148,6 +148,7 @@
                             </textView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ktn-mE-L6O">
                                 <rect key="frame" x="0.0" y="597" width="375" height="50"/>
+                                <color key="backgroundColor" red="0.10980392160000001" green="0.10980392160000001" blue="0.10980392160000001" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="50" id="s9I-ge-98M"/>
                                 </constraints>
