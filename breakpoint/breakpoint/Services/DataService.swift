@@ -79,6 +79,10 @@ class DataService {
     }
     
     
+    func getEmail(forSearchQuery query: String, handler: @escaping (_ emailArray: [String]) -> ()) {
+        
+    }
+    
     
     
 }
