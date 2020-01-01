@@ -44,5 +44,10 @@ class MeVC: UIViewController {
         present(logoutPopup, animated: true, completion: nil)
     }
     
-
+    @IBAction func editBtnWasPressed(_ sender: Any) {
+        guard let meEditVC = storyboard?.instantiateViewController(identifier: "MeEditVC") as? MeEditVC else { return }
+        presentDetail(meEditVC)
+        
+    }
+    
 }

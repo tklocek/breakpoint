@@ -33,6 +33,10 @@
 		705DCF3923A94B690066B144 /* InsetTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 705DCF3823A94B690066B144 /* InsetTextField.swift */; };
 		705DCF3B23A950BE0066B144 /* ShadowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 705DCF3A23A950BE0066B144 /* ShadowView.swift */; };
 		705DCF3D23A953270066B144 /* AuthService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 705DCF3C23A953270066B144 /* AuthService.swift */; };
+		70D3978823BC942E00BAA9EC /* UIViewControllerExt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70D3978723BC942E00BAA9EC /* UIViewControllerExt.swift */; };
+		70D3978A23BCA4BD00BAA9EC /* InsertTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70D3978923BCA4BD00BAA9EC /* InsertTextView.swift */; };
+		70D3978C23BCAA5200BAA9EC /* MeEditVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70D3978B23BCAA5200BAA9EC /* MeEditVC.swift */; };
+		70D3978E23BD209200BAA9EC /* ImagePickerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70D3978D23BD209200BAA9EC /* ImagePickerController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -63,6 +67,10 @@
 		705DCF3823A94B690066B144 /* InsetTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsetTextField.swift; sourceTree = "<group>"; };
 		705DCF3A23A950BE0066B144 /* ShadowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShadowView.swift; sourceTree = "<group>"; };
 		705DCF3C23A953270066B144 /* AuthService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthService.swift; sourceTree = "<group>"; };
+		70D3978723BC942E00BAA9EC /* UIViewControllerExt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewControllerExt.swift; sourceTree = "<group>"; };
+		70D3978923BCA4BD00BAA9EC /* InsertTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsertTextView.swift; sourceTree = "<group>"; };
+		70D3978B23BCAA5200BAA9EC /* MeEditVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeEditVC.swift; sourceTree = "<group>"; };
+		70D3978D23BD209200BAA9EC /* ImagePickerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerController.swift; sourceTree = "<group>"; };
 		8F9ADD5925C525955AA91565 /* Pods-breakpoint.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-breakpoint.debug.xcconfig"; path = "Target Support Files/Pods-breakpoint/Pods-breakpoint.debug.xcconfig"; sourceTree = "<group>"; };
 		C0109CC756CC7C5A01C9EFFC /* Pods_breakpoint.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_breakpoint.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA139D08D36224E5D7DEFE68 /* Pods-breakpoint.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-breakpoint.release.xcconfig"; path = "Target Support Files/Pods-breakpoint/Pods-breakpoint.release.xcconfig"; sourceTree = "<group>"; };
@@ -128,6 +136,8 @@
 				70152FF623AD3D5A00B109C3 /* CreatePostVC.swift */,
 				705B55F623B0D2930073D5EC /* CreateGroupsVC.swift */,
 				7019B81E23B90D6300863142 /* GroupFeedVC.swift */,
+				70D3978B23BCAA5200BAA9EC /* MeEditVC.swift */,
+				70D3978D23BD209200BAA9EC /* ImagePickerController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -141,6 +151,7 @@
 				7019B81623B6B65C00863142 /* UserCell.swift */,
 				7019B81823B81DA500863142 /* GroupCell.swift */,
 				7019B81C23B90CEE00863142 /* GroupFeedCell.swift */,
+				70D3978923BCA4BD00BAA9EC /* InsertTextView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -158,6 +169,7 @@
 			isa = PBXGroup;
 			children = (
 				70152FFA23AD673400B109C3 /* UIViewExt.swift */,
+				70D3978723BC942E00BAA9EC /* UIViewControllerExt.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -311,15 +323,19 @@
 				705DCF1C23A8E1910066B144 /* GroupsVC.swift in Sources */,
 				7019B81723B6B65C00863142 /* UserCell.swift in Sources */,
 				705DCF3723A94ADE0066B144 /* LoginVC.swift in Sources */,
+				70D3978E23BD209200BAA9EC /* ImagePickerController.swift in Sources */,
 				7019B81B23B8212D00863142 /* Group.swift in Sources */,
 				705DCF3923A94B690066B144 /* InsetTextField.swift in Sources */,
 				705DCF1A23A8E1910066B144 /* FeedVC.swift in Sources */,
 				70152FFD23AD728000B109C3 /* FeedCell.swift in Sources */,
 				7019B81923B81DA500863142 /* GroupCell.swift in Sources */,
+				70D3978823BC942E00BAA9EC /* UIViewControllerExt.swift in Sources */,
+				70D3978A23BCA4BD00BAA9EC /* InsertTextView.swift in Sources */,
 				705DCF1623A8E1910066B144 /* AppDelegate.swift in Sources */,
 				70152FF523ABA89A00B109C3 /* MeVC.swift in Sources */,
 				70152FF723AD3D5A00B109C3 /* CreatePostVC.swift in Sources */,
 				705DCF3D23A953270066B144 /* AuthService.swift in Sources */,
+				70D3978C23BCAA5200BAA9EC /* MeEditVC.swift in Sources */,
 				7019B81D23B90CEE00863142 /* GroupFeedCell.swift in Sources */,
 				705B55F723B0D2930073D5EC /* CreateGroupsVC.swift in Sources */,
 				70152FFF23AD73FB00B109C3 /* Message.swift in Sources */,
