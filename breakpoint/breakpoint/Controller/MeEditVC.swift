@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Firebase
+
 
 class MeEditVC: UIViewController {
 
@@ -60,6 +62,10 @@ class MeEditVC: UIViewController {
     }
     
     @IBAction func saveBtnWasPressed(_ sender: Any) {
+        DataService.instance.uploadUserDetails(withImage: self.profileImage.image!, andDescription: self.descriptionTextView.text, atUID: Auth.auth().currentUser!.uid) { (success) in
+            print("success")
+        }
+        
     }
     
     @IBAction func loadImageBtnWasPressed(_ sender: UIButton) {

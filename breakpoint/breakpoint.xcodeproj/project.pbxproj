@@ -37,6 +37,8 @@
 		70D3978A23BCA4BD00BAA9EC /* InsertTextView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70D3978923BCA4BD00BAA9EC /* InsertTextView.swift */; };
 		70D3978C23BCAA5200BAA9EC /* MeEditVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70D3978B23BCAA5200BAA9EC /* MeEditVC.swift */; };
 		70D3978E23BD209200BAA9EC /* ImagePickerController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70D3978D23BD209200BAA9EC /* ImagePickerController.swift */; };
+		70D3979223BD2D1900BAA9EC /* CircleView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70D3979123BD2D1900BAA9EC /* CircleView.swift */; };
+		70D3979423BD372600BAA9EC /* UserDetails.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70D3979323BD372600BAA9EC /* UserDetails.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -71,6 +73,8 @@
 		70D3978923BCA4BD00BAA9EC /* InsertTextView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InsertTextView.swift; sourceTree = "<group>"; };
 		70D3978B23BCAA5200BAA9EC /* MeEditVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MeEditVC.swift; sourceTree = "<group>"; };
 		70D3978D23BD209200BAA9EC /* ImagePickerController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagePickerController.swift; sourceTree = "<group>"; };
+		70D3979123BD2D1900BAA9EC /* CircleView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircleView.swift; sourceTree = "<group>"; };
+		70D3979323BD372600BAA9EC /* UserDetails.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetails.swift; sourceTree = "<group>"; };
 		8F9ADD5925C525955AA91565 /* Pods-breakpoint.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-breakpoint.debug.xcconfig"; path = "Target Support Files/Pods-breakpoint/Pods-breakpoint.debug.xcconfig"; sourceTree = "<group>"; };
 		C0109CC756CC7C5A01C9EFFC /* Pods_breakpoint.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_breakpoint.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CA139D08D36224E5D7DEFE68 /* Pods-breakpoint.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-breakpoint.release.xcconfig"; path = "Target Support Files/Pods-breakpoint/Pods-breakpoint.release.xcconfig"; sourceTree = "<group>"; };
@@ -152,6 +156,7 @@
 				7019B81823B81DA500863142 /* GroupCell.swift */,
 				7019B81C23B90CEE00863142 /* GroupFeedCell.swift */,
 				70D3978923BCA4BD00BAA9EC /* InsertTextView.swift */,
+				70D3979123BD2D1900BAA9EC /* CircleView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -161,6 +166,7 @@
 			children = (
 				70152FFE23AD73FB00B109C3 /* Message.swift */,
 				7019B81A23B8212D00863142 /* Group.swift */,
+				70D3979323BD372600BAA9EC /* UserDetails.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -324,8 +330,10 @@
 				7019B81723B6B65C00863142 /* UserCell.swift in Sources */,
 				705DCF3723A94ADE0066B144 /* LoginVC.swift in Sources */,
 				70D3978E23BD209200BAA9EC /* ImagePickerController.swift in Sources */,
+				70D3979223BD2D1900BAA9EC /* CircleView.swift in Sources */,
 				7019B81B23B8212D00863142 /* Group.swift in Sources */,
 				705DCF3923A94B690066B144 /* InsetTextField.swift in Sources */,
+				70D3979423BD372600BAA9EC /* UserDetails.swift in Sources */,
 				705DCF1A23A8E1910066B144 /* FeedVC.swift in Sources */,
 				70152FFD23AD728000B109C3 /* FeedCell.swift in Sources */,
 				7019B81923B81DA500863142 /* GroupCell.swift in Sources */,

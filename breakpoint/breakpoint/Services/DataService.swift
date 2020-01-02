@@ -19,6 +19,7 @@ class DataService {
     private var _REF_USERS = DB_BASE.child("users")
     private var _REF_GROUPS = DB_BASE.child("groups")
     private var _REF_FEED = DB_BASE.child("feed")
+    private var _REF_USERDETAILS = DB_BASE.child("userdetails")
 
     var REF_BASE: DatabaseReference {
         return _REF_BASE!
@@ -36,6 +37,9 @@ class DataService {
         return _REF_FEED
     }
     
+    var REF_USERDETAILS: DatabaseReference {
+        return _REF_USERDETAILS
+    }
     
     func createDBUser(uid: String, userData: Dictionary<String, Any>) {
         REF_USERS.child(uid).updateChildValues(userData)
@@ -164,8 +168,17 @@ class DataService {
             }
             handler(groupsArray)
         }
+    }
+    
+    func uploadUserDetails(withImage image: UIImage, andDescription description: String, atUID uid: String, sendComplete: @escaping (_ status: Bool)->()) {
+        
+//REF_GROUPS.child(groupKey!).child("messages").childByAutoId().updateChildValues(["content": message, "senderId": uid])
+        REF_USERDETAILS.child(uid).updateChildValues(["image": image, "description": description])
+        sendComplete(true)
         
         
     }
+    
+    
     
 }

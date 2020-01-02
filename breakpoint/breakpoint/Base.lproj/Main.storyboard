@@ -294,7 +294,7 @@
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="N9c-7W-uHg">
                                 <rect key="frame" x="0.0" y="70" width="375" height="275"/>
                                 <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="defaultProfileImage" translatesAutoresizingMaskIntoConstraints="NO" id="vJ9-9o-0Bg">
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="defaultProfileImage" translatesAutoresizingMaskIntoConstraints="NO" id="vJ9-9o-0Bg" customClass="CircleImage" customModule="breakpoint" customModuleProvider="target">
                                         <rect key="frame" x="137.5" y="30" width="100" height="100"/>
                                         <constraints>
                                             <constraint firstAttribute="width" constant="100" id="MEn-ep-n1a"/>
@@ -431,32 +431,6 @@
                                 </constraints>
                                 <viewLayoutGuide key="safeArea" id="9wo-Fe-ztd"/>
                             </view>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="Vch-Rw-48G">
-                                <rect key="frame" x="15" y="335" width="345" height="103"/>
-                                <subviews>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="old password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xld-hB-yzR" customClass="InsetTextField" customModule="breakpoint" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="0.0" width="345" height="29"/>
-                                        <color key="backgroundColor" red="0.10980392160000001" green="0.10980392160000001" blue="0.10980392160000001" alpha="1" colorSpace="calibratedRGB"/>
-                                        <color key="textColor" red="0.56078431370000004" green="0.81176470590000005" blue="0.30588235289999999" alpha="1" colorSpace="calibratedRGB"/>
-                                        <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="18"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="new password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Izg-aX-RBv" customClass="InsetTextField" customModule="breakpoint" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="37" width="345" height="29"/>
-                                        <color key="backgroundColor" red="0.10980392160000001" green="0.10980392160000001" blue="0.10980392160000001" alpha="1" colorSpace="calibratedRGB"/>
-                                        <color key="textColor" red="0.56078431370000004" green="0.81176470590000005" blue="0.30588235289999999" alpha="1" colorSpace="calibratedRGB"/>
-                                        <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="18"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
-                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="line" placeholder="retype new password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="s2k-Yg-TDo" customClass="InsetTextField" customModule="breakpoint" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="74" width="345" height="29"/>
-                                        <color key="backgroundColor" red="0.10980392160000001" green="0.10980392160000001" blue="0.10980392160000001" alpha="1" colorSpace="calibratedRGB"/>
-                                        <color key="textColor" red="0.56078431370000004" green="0.81176470590000005" blue="0.30588235289999999" alpha="1" colorSpace="calibratedRGB"/>
-                                        <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="18"/>
-                                        <textInputTraits key="textInputTraits"/>
-                                    </textField>
-                                </subviews>
-                            </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UrQ-z3-1vF">
                                 <rect key="frame" x="137.5" y="85" width="100" height="100"/>
                                 <constraints>
@@ -477,7 +451,7 @@
                                 <fontDescription key="fontDescription" name="Menlo-Regular" family="Menlo" pointSize="16"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="defaultProfileImage" translatesAutoresizingMaskIntoConstraints="NO" id="1UH-ZC-lvx">
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="defaultProfileImage" translatesAutoresizingMaskIntoConstraints="NO" id="1UH-ZC-lvx" customClass="CircleImage" customModule="breakpoint" customModuleProvider="target">
                                 <rect key="frame" x="137.5" y="85" width="100" height="100"/>
                                 <constraints>
                                     <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="100" id="AfX-WI-pTh"/>
@@ -491,15 +465,12 @@
                         <constraints>
                             <constraint firstItem="1UH-ZC-lvx" firstAttribute="top" secondItem="c1Y-zc-Z1m" secondAttribute="bottom" constant="15" id="1au-if-nxJ"/>
                             <constraint firstItem="c1Y-zc-Z1m" firstAttribute="trailing" secondItem="AQf-Qk-toG" secondAttribute="trailing" id="DNG-HB-3eh"/>
-                            <constraint firstItem="Vch-Rw-48G" firstAttribute="leading" secondItem="AQf-Qk-toG" secondAttribute="leading" constant="15" id="Yu4-Er-0tz"/>
                             <constraint firstItem="UrQ-z3-1vF" firstAttribute="top" secondItem="c1Y-zc-Z1m" secondAttribute="bottom" constant="15" id="aZR-IN-jST"/>
-                            <constraint firstItem="Vch-Rw-48G" firstAttribute="top" secondItem="Hth-Wb-L04" secondAttribute="bottom" constant="15" id="d0d-Oo-3zW"/>
                             <constraint firstItem="c1Y-zc-Z1m" firstAttribute="top" secondItem="AQf-Qk-toG" secondAttribute="top" id="hcH-If-K4o"/>
                             <constraint firstItem="UrQ-z3-1vF" firstAttribute="centerX" secondItem="gZ7-bG-6sl" secondAttribute="centerX" id="i0h-mg-Ix0"/>
                             <constraint firstItem="Hth-Wb-L04" firstAttribute="leading" secondItem="AQf-Qk-toG" secondAttribute="leading" constant="15" id="kTy-5o-ryL"/>
                             <constraint firstItem="Hth-Wb-L04" firstAttribute="top" secondItem="1UH-ZC-lvx" secondAttribute="bottom" constant="15" id="niW-Et-S2e"/>
                             <constraint firstItem="c1Y-zc-Z1m" firstAttribute="leading" secondItem="AQf-Qk-toG" secondAttribute="leading" id="qgg-IW-YUt"/>
-                            <constraint firstItem="AQf-Qk-toG" firstAttribute="trailing" secondItem="Vch-Rw-48G" secondAttribute="trailing" constant="15" id="rda-wM-1g1"/>
                             <constraint firstItem="AQf-Qk-toG" firstAttribute="trailing" secondItem="Hth-Wb-L04" secondAttribute="trailing" constant="15" id="txz-T7-G0A"/>
                             <constraint firstItem="Hth-Wb-L04" firstAttribute="top" secondItem="UrQ-z3-1vF" secondAttribute="bottom" constant="15" id="tyO-uE-gT8"/>
                             <constraint firstItem="1UH-ZC-lvx" firstAttribute="centerX" secondItem="gZ7-bG-6sl" secondAttribute="centerX" id="zne-7z-9Fo"/>
@@ -509,10 +480,7 @@
                     <connections>
                         <outlet property="descriptionTextView" destination="Hth-Wb-L04" id="ljX-yB-ZM1"/>
                         <outlet property="loadImageBtn" destination="UrQ-z3-1vF" id="hZp-va-gZc"/>
-                        <outlet property="newPassText" destination="Izg-aX-RBv" id="sl6-6N-BI2"/>
-                        <outlet property="oldPassText" destination="Izg-aX-RBv" id="NpG-XO-lqq"/>
                         <outlet property="profileImage" destination="1UH-ZC-lvx" id="7Ja-r2-daC"/>
-                        <outlet property="retypePassText" destination="s2k-Yg-TDo" id="s4G-wX-ygR"/>
                         <outlet property="saveBtn" destination="n8H-nG-0qj" id="TJo-9X-3VJ"/>
                     </connections>
                 </viewController>
