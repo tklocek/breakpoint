@@ -172,12 +172,38 @@ class DataService {
     
     func uploadUserDetails(withImage image: UIImage, andDescription description: String, atUID uid: String, sendComplete: @escaping (_ status: Bool)->()) {
         
-//REF_GROUPS.child(groupKey!).child("messages").childByAutoId().updateChildValues(["content": message, "senderId": uid])
-        REF_USERDETAILS.child(uid).updateChildValues(["image": image, "description": description])
-        sendComplete(true)
         
+        let imageName = "\(uid).jpeg"
+        let storageRef = Storage.storage().reference().child("profileImages").child(imageName)
+        
+        if let image = image.jpegData(compressionQuality: 0.9){
+            storageRef.putData(image, metadata: nil) { (storageMetadata, error) in
+                if error != nil {
+                    print(error as Any)
+                    return
+                } else {
+                    storageRef.downloadURL { (url, error) in
+                        
+                        if error != nil {
+                            print(error as Any)
+                            return
+                        }
+                        
+                        if url != nil {
+                            let urlString = String(describing: url!.absoluteString)
+                            self.REF_USERDETAILS.child(uid).updateChildValues(["description": description, "filename": imageName, "imageURL": urlString])
+                            sendComplete(true)
+                        }
+                    }
+                    
+                }
+            }
+        
+        }
         
     }
+    
+    
     
     
     

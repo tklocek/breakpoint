@@ -9,6 +9,7 @@
 import UIKit
 
 class UserDetails {
+    
     private var _uid: String
     private var _image: UIImage
     private var _description: String

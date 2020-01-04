@@ -364,6 +364,7 @@
                     </view>
                     <tabBarItem key="tabBarItem" title="Me" image="me-tabIcon" selectedImage="me-tabIcon" id="edZ-jf-UxR"/>
                     <connections>
+                        <outlet property="descriptionLbl" destination="7CI-DQ-JTu" id="Vf7-hU-Z5p"/>
                         <outlet property="emailLbl" destination="fDJ-ih-74W" id="A4s-XE-u4u"/>
                         <outlet property="profileImage" destination="vJ9-9o-0Bg" id="aG7-Wo-vCs"/>
                         <outlet property="tableView" destination="dme-Jf-3bf" id="Bj3-Zj-Dca"/>
@@ -460,15 +461,25 @@
                                     <constraint firstAttribute="width" constant="100" id="yyR-ix-qef"/>
                                 </constraints>
                             </imageView>
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" hidesWhenStopped="YES" style="large" translatesAutoresizingMaskIntoConstraints="NO" id="iHg-GT-tMb">
+                                <rect key="frame" x="167.5" y="163.5" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="62L-Qb-zha"/>
+                                    <constraint firstAttribute="width" constant="40" id="qgi-8D-rms"/>
+                                </constraints>
+                                <color key="color" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </activityIndicatorView>
                         </subviews>
                         <color key="backgroundColor" red="0.25490196079999999" green="0.27058823529999998" blue="0.31372549020000001" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="1UH-ZC-lvx" firstAttribute="top" secondItem="c1Y-zc-Z1m" secondAttribute="bottom" constant="15" id="1au-if-nxJ"/>
+                            <constraint firstItem="iHg-GT-tMb" firstAttribute="centerX" secondItem="gZ7-bG-6sl" secondAttribute="centerX" id="AAb-ge-HyH"/>
                             <constraint firstItem="c1Y-zc-Z1m" firstAttribute="trailing" secondItem="AQf-Qk-toG" secondAttribute="trailing" id="DNG-HB-3eh"/>
                             <constraint firstItem="UrQ-z3-1vF" firstAttribute="top" secondItem="c1Y-zc-Z1m" secondAttribute="bottom" constant="15" id="aZR-IN-jST"/>
                             <constraint firstItem="c1Y-zc-Z1m" firstAttribute="top" secondItem="AQf-Qk-toG" secondAttribute="top" id="hcH-If-K4o"/>
                             <constraint firstItem="UrQ-z3-1vF" firstAttribute="centerX" secondItem="gZ7-bG-6sl" secondAttribute="centerX" id="i0h-mg-Ix0"/>
                             <constraint firstItem="Hth-Wb-L04" firstAttribute="leading" secondItem="AQf-Qk-toG" secondAttribute="leading" constant="15" id="kTy-5o-ryL"/>
+                            <constraint firstItem="iHg-GT-tMb" firstAttribute="centerY" secondItem="gZ7-bG-6sl" secondAttribute="centerY" constant="-150" id="n7B-QT-yvn"/>
                             <constraint firstItem="Hth-Wb-L04" firstAttribute="top" secondItem="1UH-ZC-lvx" secondAttribute="bottom" constant="15" id="niW-Et-S2e"/>
                             <constraint firstItem="c1Y-zc-Z1m" firstAttribute="leading" secondItem="AQf-Qk-toG" secondAttribute="leading" id="qgg-IW-YUt"/>
                             <constraint firstItem="AQf-Qk-toG" firstAttribute="trailing" secondItem="Hth-Wb-L04" secondAttribute="trailing" constant="15" id="txz-T7-G0A"/>
@@ -478,6 +489,7 @@
                         <viewLayoutGuide key="safeArea" id="AQf-Qk-toG"/>
                     </view>
                     <connections>
+                        <outlet property="activityIndicator" destination="n7B-QT-yvn" id="a3L-Fz-92w"/>
                         <outlet property="descriptionTextView" destination="Hth-Wb-L04" id="ljX-yB-ZM1"/>
                         <outlet property="loadImageBtn" destination="UrQ-z3-1vF" id="hZp-va-gZc"/>
                         <outlet property="profileImage" destination="1UH-ZC-lvx" id="7Ja-r2-daC"/>
@@ -1133,7 +1145,7 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6eQ-WE-Qm4">
-                                <rect key="frame" x="147" y="247" width="80" height="33"/>
+                                <rect key="frame" x="147.5" y="247" width="80" height="33"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="80" id="xMx-7N-ot0"/>
                                 </constraints>

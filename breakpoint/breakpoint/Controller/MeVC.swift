@@ -15,6 +15,7 @@ class MeVC: UIViewController {
     @IBOutlet weak var profileImage: UIImageView!
     @IBOutlet weak var emailLbl: UILabel!
     @IBOutlet weak var tableView: UITableView!
+    @IBOutlet weak var descriptionLbl: UILabel!
     
     
     override func viewDidLoad() {
@@ -26,6 +27,17 @@ class MeVC: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.emailLbl.text = Auth.auth().currentUser?.email
+        
+        if let imageData = UserDefaults.standard.object(forKey: "profileImage") as? Data,
+        let image = UIImage(data: imageData) {
+            profileImage.image = image
+        }
+        
+        if let description = UserDefaults.standard.object(forKey: "profileDescription") as? String {
+            descriptionLbl.text = description
+        }
+
+        
     }
     
     @IBAction func signOutBtnWasPressed(_ sender: Any) {
