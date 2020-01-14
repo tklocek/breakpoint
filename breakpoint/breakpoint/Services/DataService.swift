@@ -202,9 +202,41 @@ class DataService {
         }
         
     }
+            
+    func getAllUserProfiles(fromUID uids: [String], handler: @escaping (_ userDetailArray: [UserDetails]) -> ()) {
+        
+        var userDetailArray = [UserDetails]()
+        
+        for uid in uids {
+            REF_USERDETAILS.child(uid).observeSingleEvent(of: .value) { (snapshot) in
+                //Get UserDetail values
+                let value = snapshot.value as? NSDictionary
+                let description = value?["description"] as? String ?? ""
+                let imageURL = value?["imageURL"] as? String ?? ""
+                //let filename = value?["filename"] as? String ?? ""
+                
+                var profileImage: UIImage?
+                
+                if imageURL != "" {
+                    profileImage = self.getImage(fromURL: imageURL)
+                } else {
+                    profileImage = nil
+                }
+                
+                let userDetail = UserDetails(uid: uid, image: profileImage, description: description)
+                userDetailArray.append(userDetail)
+            }
+        }
+        
+        
+        handler(userDetailArray)
+    }
     
-    
-    
+    func getImage(fromURL url: String) -> UIImage {
+        let temp = #imageLiteral(resourceName: "me-tabIcon")
+        
+        return temp
+    }
     
     
 }

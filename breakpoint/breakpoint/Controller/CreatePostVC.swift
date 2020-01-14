@@ -27,6 +27,11 @@ class CreatePostVC: UIViewController {
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         self.emailLbl.text = Auth.auth().currentUser?.email
+        
+        if let imageData = UserDefaults.standard.object(forKey: "profileImage") as? Data,
+        let image = UIImage(data: imageData) {
+           profileImage.image = image
+        }
     }
     
     @IBAction func sendBtnWasPressed(_ sender: Any) {
