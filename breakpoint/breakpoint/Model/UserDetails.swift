@@ -10,13 +10,8 @@ import UIKit
 
 class UserDetails {
     
-    private var _uid: String
     private var _image: UIImage?
     private var _description: String
-    
-    var uid: String {
-        return _uid
-    }
     
     var image: UIImage? {
         return _image
@@ -26,8 +21,7 @@ class UserDetails {
         return _description
     }
     
-    init(uid: String, image: UIImage?, description: String) {
-        self._uid = uid
+    init(image: UIImage?, description: String) {
         self._image = image
         self._description = description
     }

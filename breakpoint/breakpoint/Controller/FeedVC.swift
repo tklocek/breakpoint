@@ -15,8 +15,7 @@ class FeedVC: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     
     var messageArray = [Message]()
-    var idsArray = [String]()
-    var usersDetail = [UserDetails]()
+    var usersDetail = [String: UserDetails]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -27,29 +26,45 @@ class FeedVC: UIViewController {
 
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
+        
         DataService.instance.getAllFeedMessages { (returnedMessagesArray) in
+            var idsArray = [String]()
             self.messageArray = returnedMessagesArray.reversed()
             self.tableView.reloadData()
             
+            
             if self.messageArray.count > 0 {
               for id in 0...(self.messageArray.count - 1) {
-                  if !(self.idsArray.contains(self.messageArray[id].senderId)) {
-                      self.idsArray.append(self.messageArray[id].senderId)
-                  }
-              }
-                DataService.instance.getAllUserProfiles(fromUID: self.idsArray) { (userDetailsAquired) in
-                    self.usersDetail = userDetailsAquired
-                    
-                    
-                }
-                    
+                  if !(idsArray.contains(self.messageArray[id].senderId)) {
+                      idsArray.append(self.messageArray[id].senderId)
+                    }
                 }
                 
-                
-            
-             }
+            }
+         
+            self.getAllUserProfiles(arrayOfID: idsArray)
         }
+        
+        
+    }
 
+    func getAllUserProfiles(arrayOfID: [String]) {
+        usersDetail.removeAll()
+        print(arrayOfID)
+        for index in 0...(arrayOfID.count - 1) {
+            DataService.instance.getUserProfile(fromUID: arrayOfID[index]) { (userDetailDict) in
+                self.usersDetail[arrayOfID[index]] = userDetailDict
+                print(self.usersDetail.count)
+                self.tableView.reloadData()
+            }
+                
+        }
+        
+        
+        
+    }
+    
+    
 }
 
 extension FeedVC: UITableViewDelegate, UITableViewDataSource {
@@ -67,18 +82,22 @@ extension FeedVC: UITableViewDelegate, UITableViewDataSource {
         let message = messageArray[indexPath.row]
         var image = UIImage(named: "defaultProfileImage")
         
+       // print(usersDetail)
         if message.senderId == Auth.auth().currentUser?.uid {
             if let imageData = UserDefaults.standard.object(forKey: "profileImage") as? Data {
                 image = UIImage(data: imageData)
+            } else if usersDetail[message.senderId]?.image != nil {
+                image = usersDetail[message.senderId]?.image
+                UserDefaults.standard.set(image!.jpegData(compressionQuality: 0.9), forKey: "profileImage")
             } else {
                 image = UIImage(named: "defaultProfileImage")
             }
             
-        } else if usersDetail. {
+        } else if usersDetail[message.senderId]?.image != nil{
+            image = usersDetail[message.senderId]?.image
+        } else {
             image = UIImage(named: "defaultProfileImage")
         }
-        
-        
         
         DataService.instance.getUserName(forUID: message.senderId) { (returnedUsername) in
             cell.configureCell(profileImage: image!, email: returnedUsername, content: message.content)

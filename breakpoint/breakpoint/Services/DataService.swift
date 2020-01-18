@@ -202,12 +202,9 @@ class DataService {
         }
         
     }
-            
-    func getAllUserProfiles(fromUID uids: [String], handler: @escaping (_ userDetailArray: [UserDetails]) -> ()) {
+    
+    func getUserProfile(fromUID uid: String, handler: @escaping (_ userDetailHandler: UserDetails) -> ()) {
         
-        var userDetailArray = [UserDetails]()
-        
-        for uid in uids {
             REF_USERDETAILS.child(uid).observeSingleEvent(of: .value) { (snapshot) in
                 //Get UserDetail values
                 let value = snapshot.value as? NSDictionary
@@ -223,17 +220,17 @@ class DataService {
                     profileImage = nil
                 }
                 
-                let userDetail = UserDetails(uid: uid, image: profileImage, description: description)
-                userDetailArray.append(userDetail)
-            }
+                let userDetail = UserDetails(image: profileImage, description: description)
+                
+            
+            handler(userDetail)
         }
-        
-        
-        handler(userDetailArray)
     }
     
     func getImage(fromURL url: String) -> UIImage {
-        let temp = #imageLiteral(resourceName: "me-tabIcon")
+        let temp = #imageLiteral(resourceName: "temp_picture")
+        
+        
         
         return temp
     }
