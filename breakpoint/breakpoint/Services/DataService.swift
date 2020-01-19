@@ -228,11 +228,26 @@ class DataService {
     }
     
     func getImage(fromURL url: String) -> UIImage {
-        let temp = #imageLiteral(resourceName: "temp_picture")
+        var image = #imageLiteral(resourceName: "close")
         
+        let task = URLSession.shared.dataTask(with: URL(string: url)!) { (data, response, error) in
+
+            if error != nil {
+                print("error:")
+                print(error)
+                return
+            }
+
+            DispatchQueue.main.async(execute: {
+                       image = UIImage(data: data!)!
+            })
+//  
+            
+        }
         
+        task.resume()
         
-        return temp
+        return image
     }
     
     

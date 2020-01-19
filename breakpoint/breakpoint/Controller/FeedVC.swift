@@ -50,11 +50,10 @@ class FeedVC: UIViewController {
 
     func getAllUserProfiles(arrayOfID: [String]) {
         usersDetail.removeAll()
-        print(arrayOfID)
+    
         for index in 0...(arrayOfID.count - 1) {
             DataService.instance.getUserProfile(fromUID: arrayOfID[index]) { (userDetailDict) in
                 self.usersDetail[arrayOfID[index]] = userDetailDict
-                print(self.usersDetail.count)
                 self.tableView.reloadData()
             }
                 
