@@ -29,6 +29,7 @@ class FeedVC: UIViewController {
         
         DataService.instance.getAllFeedMessages { (returnedMessagesArray) in
             var idsArray = [String]()
+            self.usersDetail.removeAll()
             self.messageArray = returnedMessagesArray.reversed()
             self.tableView.reloadData()
             
@@ -42,25 +43,14 @@ class FeedVC: UIViewController {
                 
             }
          
-            self.getAllUserProfiles(arrayOfID: idsArray)
-        }
-        
-        
-    }
-
-    func getAllUserProfiles(arrayOfID: [String]) {
-        usersDetail.removeAll()
-    
-        for index in 0...(arrayOfID.count - 1) {
-            DataService.instance.getUserProfile(fromUID: arrayOfID[index]) { (userDetailDict) in
-                self.usersDetail[arrayOfID[index]] = userDetailDict
-                self.tableView.reloadData()
+            for index in 0...(idsArray.count - 1) {
+                DataService.instance.getUserProfile(fromUID: idsArray[index]) { (userDetailDict) in
+                    self.usersDetail[idsArray[index]] = userDetailDict
+                }
             }
-                
+            
+            
         }
-        
-        
-        
     }
     
     
@@ -81,24 +71,34 @@ extension FeedVC: UITableViewDelegate, UITableViewDataSource {
         let message = messageArray[indexPath.row]
         var image = UIImage(named: "defaultProfileImage")
         
-       // print(usersDetail)
-        if message.senderId == Auth.auth().currentUser?.uid {
-            if let imageData = UserDefaults.standard.object(forKey: "profileImage") as? Data {
-                image = UIImage(data: imageData)
-            } else if usersDetail[message.senderId]?.image != nil {
-                image = usersDetail[message.senderId]?.image
-                UserDefaults.standard.set(image!.jpegData(compressionQuality: 0.9), forKey: "profileImage")
-            } else {
-                image = UIImage(named: "defaultProfileImage")
+        DataService.instance.getUserName(forUID: message.senderId) { (returnedUsername) in
+        
+            if message.senderId == Auth.auth().currentUser?.uid {
+                if let imageData = UserDefaults.standard.object(forKey: "profileImage") as? Data {
+                    image = UIImage(data: imageData)
+                }
+            } else if let urlString = self.usersDetail[message.senderId]?.imageURL {
+                if urlString != "" {
+                    let url = URL(string: urlString)!
+                    let task = URLSession.shared.dataTask(with: url) { (data, response, error) in
+
+                        if error != nil {
+                            print("error:")
+                            print(error)
+                            return
+                        }
+
+                                DispatchQueue.main.async(execute: {
+                                image = UIImage(data: data!)!
+                                cell.imageView?.image = image
+                        print(url)
+                                })
+                    }
+                    task.resume()
+                }
             }
             
-        } else if usersDetail[message.senderId]?.image != nil{
-            image = usersDetail[message.senderId]?.image
-        } else {
-            image = UIImage(named: "defaultProfileImage")
-        }
         
-        DataService.instance.getUserName(forUID: message.senderId) { (returnedUsername) in
             cell.configureCell(profileImage: image!, email: returnedUsername, content: message.content)
         }
         

@@ -212,15 +212,7 @@ class DataService {
                 let imageURL = value?["imageURL"] as? String ?? ""
                 //let filename = value?["filename"] as? String ?? ""
                 
-                var profileImage: UIImage?
-                
-                if imageURL != "" {
-                    profileImage = self.getImage(fromURL: imageURL)
-                } else {
-                    profileImage = nil
-                }
-                
-                let userDetail = UserDetails(image: profileImage, description: description)
+                let userDetail = UserDetails(imageURL: imageURL, description: description)
                 
             
             handler(userDetail)

@@ -10,19 +10,19 @@ import UIKit
 
 class UserDetails {
     
-    private var _image: UIImage?
+    private var _imageURL: String?
     private var _description: String
     
-    var image: UIImage? {
-        return _image
+    var imageURL: String? {
+        return _imageURL
     }
     
     var description: String {
         return _description
     }
     
-    init(image: UIImage?, description: String) {
-        self._image = image
+    init(imageURL: String, description: String) {
+        self._imageURL = imageURL
         self._description = description
     }
     
